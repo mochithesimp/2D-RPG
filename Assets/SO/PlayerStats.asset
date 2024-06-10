@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4f381f14d7b18847a7644014f8349b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3067d3c2c7d7a61479c4fe024f0a98d9, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  Level: 7
+  Level: 1
   Health: 10
   MaxHealth: 10
   Mana: 20
   MaxMana: 20
-  CurrentExp: 320
-  NextLevelExp: 1140
+  CurrentExp: 0
+  NextLevelExp: 100
   InitialNextLevelExp: 100
   ExpMultiplier: 50

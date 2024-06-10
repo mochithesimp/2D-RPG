@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private PlayerAnimations playerAnimations;
 
-    public void Awake()
+    private void Awake()
     {
         playerAnimations = GetComponent<PlayerAnimations>();
     }

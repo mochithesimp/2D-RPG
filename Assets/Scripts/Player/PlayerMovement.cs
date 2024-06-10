@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.Numerics;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Config")] 
+    [Header("Config")]
     [SerializeField] private float speed;
 
     private PlayerAnimations playerAnimations;
@@ -12,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Player player;
     private Rigidbody2D rb2D;
     private Vector2 moveDirection;
-
+    
     private void Awake()
     {
         player = GetComponent<Player>();
@@ -21,8 +22,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimations = GetComponent<PlayerAnimations>();
     }
     
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         ReadMovement();
     }
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         if (player.Stats.Health <= 0) return;
         rb2D.MovePosition(rb2D.position + moveDirection * (speed * Time.fixedDeltaTime));
     }
-
+    
     private void ReadMovement()
     {
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized;
@@ -46,11 +46,11 @@ public class PlayerMovement : MonoBehaviour
             playerAnimations.SetMoveBoolTransition(false);
             return;
         }
-
+        
         playerAnimations.SetMoveBoolTransition(true);
         playerAnimations.SetMoveAnimation(moveDirection);
     }
-
+    
     private void OnEnable()
     {
         actions.Enable();

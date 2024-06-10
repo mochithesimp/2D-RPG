@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
     public void ResetPlayer()
     {
         stats.ResetPlayer();
-        
         animations.ResetPlayer();
     }
 }

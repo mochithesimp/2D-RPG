@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerStats", menuName = "PlayerStats")]
+[CreateAssetMenu(fileName = "PlayerStats", menuName = "Player Stats")]
 public class PlayerStats : ScriptableObject
 {
     [Header("Config")]
@@ -19,7 +18,7 @@ public class PlayerStats : ScriptableObject
     public float CurrentExp;
     public float NextLevelExp;
     public float InitialNextLevelExp;
-    [Range(1f, 100f)]public float ExpMultiplier;
+    [Range(1f, 100f)] public float ExpMultiplier;
     
     public void ResetPlayer()
     {

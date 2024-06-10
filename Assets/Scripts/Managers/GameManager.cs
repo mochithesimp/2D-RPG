@@ -1,16 +1,15 @@
-﻿
-    using System;
-    using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-    public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
+{
+    [SerializeField] private Player player;
+
+    private void Update()
     {
-        [SerializeField] private Player player;
-
-        private void Update()
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                player.ResetPlayer();
-            }
+            player.ResetPlayer();
         }
     }
+}

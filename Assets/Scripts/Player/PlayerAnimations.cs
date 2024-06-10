@@ -19,7 +19,7 @@ public class PlayerAnimations : MonoBehaviour
 
     public void SetDeadAnimation()
     {
-        animator.SetTrigger(dead);
+        animator.SetTrigger(dead); 
     }
 
     public void SetMoveBoolTransition(bool value)
